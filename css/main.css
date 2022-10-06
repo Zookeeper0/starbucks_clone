@@ -1,5 +1,18 @@
 body {
-  color: red;
-  font-size: 100px;
+  color: #333;
+  font-size: 16px; /* 16로 시작하긴 하지만 명시적관점 */
+  font-weight: 400;
+  line-height: 1.4;
   font-family: "Nanum Gothic", sans-serif;
+}
+
+/* HEADER */
+header {
+  background-color: royalblue;
+}
+header .inner {
+  width: 1100px;
+  background-color: orange;
+}
+header .logo {
 }
