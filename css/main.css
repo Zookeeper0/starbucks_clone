@@ -1,3 +1,4 @@
+/* COMMON */
 body {
   color: #333;
   font-size: 16px; /* 16로 시작하긴 하지만 명시적관점 */
@@ -5,14 +6,27 @@ body {
   line-height: 1.4;
   font-family: "Nanum Gothic", sans-serif;
 }
+/* 인라인 요소인 이미지는 아래 부분에 영어 필기체의 특성에 따라 공간이 남아있다는 문제 해결 방안*/
+img {
+  display: block;
+}
 
 /* HEADER */
 header {
   background-color: royalblue;
 }
+/* 요소 정가운데 margin 이용 */
 header .inner {
   width: 1100px;
+  height: 120px;
+  margin: 0 auto;
   background-color: orange;
+  position: relative;
 }
 header .logo {
+  height: 75px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
