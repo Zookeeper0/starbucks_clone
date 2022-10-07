@@ -28,7 +28,6 @@ header {
 /* header의 자식요소인.inner부분만 속성적용 다른 inner과 중복방지 > */
 header > .inner {
   height: 120px;
-  background-color: orange;
 }
 header .logo {
   height: 75px;
@@ -167,7 +166,21 @@ header .main-menu .item .item__contents .contents__menu > ul > li ul li {
   cursor: pointer;
 }
 
+header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
+  color: #669900;
+}
+
 header .main-menu .item .item__contents .contents__texture {
-  background-color: royalblue;
-  height: 100px;
+  padding: 26px 0;
+  font-size: 12px;
+  background-image: url("../images/main_menu_pattern.jpg");
+}
+
+header .main-menu .item .item__contents .contents__texture h4 {
+  color: #999;
+  font-weight: 700;
+}
+header .main-menu .item .item__contents .contents__texture p {
+  color: #669900;
+  margin: 4px 0 14px;
 }
