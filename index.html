@@ -46,6 +46,19 @@
     />
     <link rel="stylesheet" href="./css/main.css" />
 
+    <!-- 스크롤 관련 -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+      integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script defer src="./js/main.js"></script>
   </head>
   <body>
@@ -381,6 +394,7 @@
           </li>
         </ul>
       </div>
+
       <!-- 사이드 뱃지 광고 -->
       <div class="badges">
         <div class="badge">
@@ -391,5 +405,42 @@
         </div>
       </div>
     </header>
+
+    <!-- div로 대체할 수 있지만 직관적, 명시적 -->
+    <!--VISUAL-->
+    <section class="visual">
+      <div class="inner">
+        <div class="title">
+          <img
+            src="./images/visual_title.png"
+            alt="STARBUCKS DELIGHTFUL START TO THE YEARS"
+          />
+          <a href="javascript:void(0)" class="btn">자세히 보기</a>
+        </div>
+        <img
+          src="./images/visual_cup1.png"
+          alt="new OATMEAL LATTE"
+          class="cup1 image"
+        />
+        <img
+          src="./images/visual_cup1_text.png"
+          alt="오트밀 라떼"
+          class="cup1 text"
+        />
+
+        <img
+          src="./images/visual_cup2.png"
+          alt="new STARBUCKS CARAMEL CRUMBLE MOCHA"
+          class="cup2 image"
+        />
+        <img
+          src="./images/visual_cup2_text.png"
+          alt="스타벅스 카라멜 크럼블 모카"
+          class="cup2 text"
+        />
+
+        <img src="./images/visual_spoon.png" alt="Spoon" class="spoon" />
+      </div>
+    </section>
   </body>
 </html>
