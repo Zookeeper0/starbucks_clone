@@ -47,6 +47,30 @@ a {
   background-color: transparent;
   color: #333;
 }
+.btn.btn--brown {
+  color: #592b18;
+  border-color: #592b18;
+}
+.btn.btn--brown:hover {
+  color: #fff;
+  background-color: #592b18;
+}
+.btn.btn--gold {
+  color: #d9aa8a;
+  border-color: #d9aa8a;
+}
+.btn.btn--gold:hover {
+  color: #fff;
+  background-color: #d9aa8a;
+}
+.btn.btn--white {
+  color: #fff;
+  border-color: #fff;
+}
+.btn.btn--white:hover {
+  color: #333;
+  background-color: #fff;
+}
 
 /* HEADER */
 header {
@@ -245,6 +269,9 @@ header .badges .badge {
   left: -10px;
 }
 .visual .title .btn {
+  position: absolute;
+  top: 259px;
+  left: 173px;
 }
 .visual .cup1.image {
   position: absolute;
@@ -272,4 +299,8 @@ header .badges .badge {
   position: absolute;
   bottom: 0;
   left: 275px;
+}
+
+.visual .fade-in {
+  opacity: 0;
 }
