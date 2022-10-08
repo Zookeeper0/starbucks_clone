@@ -72,6 +72,36 @@ a {
   background-color: #fff;
 }
 
+/*BACK TO POSITION*/
+/* back-to-position클래스 추가해서 그림요소 좌우로 밀어서 투명하게 만들어놨다가
+js SCROLLMAGIC에 의해서 감지되어 show라는 클래스가 붙으면 아래 show 클래스 속성으로 다시되돌리는 스킬 */
+.back-to-position {
+  opacity: 0;
+  transition: 1s;
+}
+.back-to-position.to-right {
+  transform: translateX(-150px);
+}
+.back-to-position.to-left {
+  transform: translateX(150px);
+}
+.show .back-to-position {
+  opacity: 1;
+  transform: translateX(0);
+}
+.show .back-to-position.delay-0 {
+  transition-delay: 0s;
+}
+.show .back-to-position.delay-1 {
+  transition-delay: 0.3s;
+}
+.show .back-to-position.delay-2 {
+  transition-delay: 0.6s;
+}
+.show .back-to-position.delay-3 {
+  transition-delay: 0.9s;
+}
+
 /* HEADER */
 header {
   width: 100%;
@@ -478,4 +508,306 @@ header .badges .badge {
 .notice .promotion .swiper-next:hover {
   background-color: #333;
   color: #fff;
+}
+
+/*REWARDS*/
+.rewards {
+  position: relative;
+}
+.rewards .bg-left {
+  width: 50%;
+  height: 100%;
+  background-color: #272727;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.rewards .bg-right {
+  width: 50%;
+  height: 100%;
+  background-color: #d5c798;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.rewards .inner {
+  background-image: url("../images/rewards.jpg");
+  height: 241px;
+}
+.rewards .btn-group {
+  position: absolute;
+  right: 0;
+  bottom: 24px;
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.rewards .btn-group .btn.sign-up {
+  /*width: 130px;*/
+  margin-right: 10px;
+}
+.rewards .btn-group .btn.sign-in {
+  width: 110px;
+}
+.rewards .btn-group .btn.gift {
+  margin-top: 10px;
+  flex: 1;
+}
+
+/*YOUTUBE VIDEO*/
+.youtube {
+  position: relative;
+  height: 700px;
+  background-color: #333;
+  overflow: hidden;
+}
+.youtube .youtube__area {
+  width: 1920px;
+  position: absolute;
+  /* 16비율 */
+  left: 50%;
+  margin-left: calc(1920px / -2);
+  /* 9비율 */
+  top: 50%;
+  margin-top: calc(1920px * 9 / 16 / -2);
+}
+.youtube .youtube__area::before {
+  content: "";
+  display: block;
+  /* 16:9 영상 비율로 요소 크기 만들기! */
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+}
+.youtube .youtube__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-image: url("../images/video_cover_pattern.png");
+}
+#player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.youtube .inner {
+  height: inherit;
+}
+.youtube .floating1 {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+.youtube .floating2 {
+  position: absolute;
+  top: 350px;
+  left: 150px;
+}
+
+/*SEASON PRODUCT*/
+.season-product {
+  background-image: url("../images/season_product_bg.jpg");
+}
+.season-product .inner {
+  height: 400px;
+}
+.season-product .floating3 {
+  position: absolute;
+  top: -200px;
+  right: 0;
+}
+.season-product .text-group {
+  position: absolute;
+  top: 110px;
+  right: 100px;
+}
+.season-product .text-group .title {
+  margin-bottom: 10px;
+}
+.season-product .text-group .description {
+  margin-bottom: 15px;
+}
+
+/*RESERVE COFFEE*/
+.reserve-coffee {
+  background-image: url("../images/reserve_bg.jpg");
+}
+.reserve-coffee .inner {
+  height: 400px;
+}
+.reserve-coffee .reserve-logo {
+  position: absolute;
+  top: 110px;
+  left: 0;
+}
+.reserve-coffee .text-group {
+  position: absolute;
+  top: 124px;
+  left: 208px;
+}
+.reserve-coffee .product {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/*PICK YOUR FAVORITE*/
+.pick-your-favorite {
+  background-image: url("../images/favorite_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.pick-your-favorite .inner {
+  padding: 110px 0;
+}
+.pick-your-favorite .text-group {
+  width: 362px;
+  margin-left: 100px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.pick-your-favorite .text-group .title {
+  margin-bottom: 40px;
+}
+.pick-your-favorite .text-group .description {
+  margin-bottom: 40px;
+}
+
+/*RESERVE STORE*/
+.reserve-store {
+  background-image: url("../images/reserve_store_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.reserve-store .inner {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reserve-store .medal {
+  width: 334px;
+  height: 334px;
+  perspective: 600px;
+}
+.reserve-store .medal .front,
+.reserve-store .medal .back {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  transition: 1s;
+  backface-visibility: hidden;
+}
+.reserve-store .medal .front {
+  transform: rotateY(0deg);
+}
+.reserve-store .medal:hover .front {
+  transform: rotateY(180deg);
+}
+.reserve-store .medal .back {
+  transform: rotateY(-180deg);
+}
+.reserve-store .medal:hover .back {
+  transform: rotateY(0deg);
+}
+.reserve-store .medal .back .btn {
+  position: absolute;
+  top: 240px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/*FIND STORE*/
+.find-store {
+  background-image: url("../images/find_store_bg.jpg");
+}
+.find-store .inner {
+  height: 400px;
+}
+.find-store .texture1 {
+  position: absolute;
+  top: 0;
+  left: 400px;
+}
+.find-store .texture2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.find-store .picture {
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+.find-store .picture1 {
+  top: -60px;
+  left: 0;
+}
+.find-store .picture2 {
+  top: 150px;
+  left: 250px;
+}
+.find-store .text-group {
+  position: absolute;
+  top: 120px;
+  left: 550px;
+}
+.find-store .text-group .title {
+  margin-bottom: 20px;
+}
+.find-store .text-group .description {
+  margin-bottom: 20px;
+}
+
+/*AWARDS*/
+.awards {
+  background-color: #272727;
+}
+.awards .inner {
+  padding: 40px 0;
+}
+.awards .swiper-container {
+  width: 100%;
+  height: 40px;
+}
+.awards .swiper-prev,
+.awards .swiper-next {
+  width: 42px;
+  height: 42px;
+  outline: none;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0.3;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+.awards .swiper-prev {
+  left: -100px;
+}
+.awards .swiper-next {
+  right: -100px;
+}
+.awards .swiper-prev:hover,
+.awards .swiper-next:hover {
+  background-color: #fff;
+  color: #333;
 }
