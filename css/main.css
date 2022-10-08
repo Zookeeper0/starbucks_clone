@@ -22,9 +22,11 @@ a {
 
 /* HEADER */
 header {
+  width: 100%;
   background-color: #f6f5f0;
   border-bottom: 1px solid #c8c8c8;
-  position: relative;
+  position: fixed;
+  top: 0;
 }
 /* 요소 정가운데 margin 이용 */
 /* header의 자식요소인.inner부분만 속성적용 다른 inner과 중복방지 > */
