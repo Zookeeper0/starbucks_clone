@@ -5,6 +5,7 @@ body {
   font-weight: 400;
   line-height: 1.4;
   font-family: "Nanum Gothic", sans-serif;
+  height: 3000px;
 }
 /* 인라인 요소인 이미지는 아래 부분에 영어 필기체의 특성에 따라 공간이 남아있다는 문제 해결 방안*/
 img {
@@ -23,6 +24,7 @@ a {
 header {
   background-color: #f6f5f0;
   border-bottom: 1px solid #c8c8c8;
+  position: relative;
 }
 /* 요소 정가운데 margin 이용 */
 /* header의 자식요소인.inner부분만 속성적용 다른 inner과 중복방지 > */
@@ -183,4 +185,17 @@ header .main-menu .item .item__contents .contents__texture h4 {
 header .main-menu .item .item__contents .contents__texture p {
   color: #669900;
   margin: 4px 0 14px;
+}
+
+header .badges {
+  position: absolute;
+  top: 132px;
+  right: 12px;
+}
+header .badges .badge {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
